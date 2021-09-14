@@ -1,5 +1,5 @@
 module.exports= {
-   // base:"/document/",
+    base:"/document/",
     title:"浪荡人儿",
     description:"简单笔记",
     head: [
