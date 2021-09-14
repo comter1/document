@@ -1,5 +1,5 @@
 module.exports= {
-    base:"/document/",
+   // base:"/document/",
     title:"浪荡人儿",
     description:"简单笔记",
     head: [
@@ -68,7 +68,7 @@ module.exports= {
       },
       { text: 'External', link: 'https://google.com' }
     ],
-      sidebar:[
+    /*  sidebar:[
       '',
       'about',
       '装机方案',
@@ -83,6 +83,6 @@ module.exports= {
       },
   
   
-    ]
+    ]*/
   }
   };
