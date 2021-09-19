@@ -16,7 +16,7 @@ module.exports= {
         items: [
           {
             text: '计算机组成原理', items: [
-              { text: '装机方案', link: '/' },
+              { text: '装机方案', link: '/计算机组成原理/装机方案' },
             ]
           },
           {
