@@ -1,0 +1,10 @@
+{
+    "theme_color": "#CCC9D8",
+    "background_color": "#FFE2E2",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "\u6d6a\u8361\u4eba\u513f",
+    "short_name": "\u6d6a\u8361\u4eba",
+    "icons": []
+}
