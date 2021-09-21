@@ -19,26 +19,29 @@ module.exports= {
       ['meta', { name: 'author', content: '浪荡人儿' }],
       ['meta', { name: 'keywords', content: 'vuepress介绍，浪荡人儿，pwn记录' }]
     ],
-    plugins: [
-      [
-        '@vuepress/last-updated',
-        {
-          transformer: (timestamp) => {
-            // 不要忘了安装 moment
-            return moment(timestamp).format("LLLL")
+    plugins: {
+      '@vuepress/last-updated':{
+        transformer: (timestamp) => moment(timestamp).format("LLLL")
+        },
+        '@vuepress/pwa': {
+          serviceWorker: true,
+          updatePopup: {
+            message: "新的风暴已经出现",
+            buttonText: "迎接新的风暴吧"
           }
-        }
-      ],
-      [
-        '@vuepress/pwa', {
-                serviceWorker: true,
-                updatePopup: {
-                  message: "新的风暴已经出现",
-                  buttonText: "迎接新的风暴吧"
-                }
-              }
-      ]
-    ],
+        },
+        '@vssue/vuepress-plugin-vssue': {
+          // 设置 `platform` 而不是 `api`
+          platform: 'github-v4',
+    
+          // 其他的 Vssue 配置
+          owner: 'comter1',
+          repo: 'document',
+          clientId: 'b8863c8b486f71d52002',
+          clientSecret: '5e118a005bca24bd208da01a54057a9349dda3bf',
+          autoCreateIssue:true
+        },
+      },
     themeConfig : {
       lastUpdated: '最后更新',
       logo: '/assets/img/logo.png',
@@ -118,3 +121,4 @@ module.exports= {
     ]*/
   }
   };
+
