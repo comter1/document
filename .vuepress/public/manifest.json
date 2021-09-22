@@ -1,10 +1,25 @@
 {
-    "theme_color": "#CCC9D8",
-    "background_color": "#FFE2E2",
+    "name": "浪荡人儿",
+    "short_name": "浪荡人",
+    "start_url": "index.html",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
-    "name": "\u6d6a\u8361\u4eba\u513f",
-    "short_name": "\u6d6a\u8361\u4eba",
-    "icons": []
-}
+    "background_color": "#FFE2E2",
+    "description": "个人主页",
+    "theme_color": "#CCC9D8",
+    "icons": [
+      {
+        "src": "/icons/.jpg",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "web"
+      },
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+      }
+    ]
+  }
