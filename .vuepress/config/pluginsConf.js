@@ -24,5 +24,8 @@ module.exports = {
         clientId: secret.clientId,
         clientSecret: secret.clientSecret,
         autoCreateIssue:true
-      }
+      },
+      '@vuepress/google-analytics':{
+        'ga': secret.ga
+      },
     }
