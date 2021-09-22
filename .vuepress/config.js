@@ -11,7 +11,7 @@ module.exports= {
       lastUpdated: '最后更新',
       logo: '/assets/img/logo.png',
       nav: navConf,
-      sidebar:[
+     /* sidebar:[
       '',
       'about',
       '装机方案',
@@ -26,7 +26,7 @@ module.exports= {
       },
   
   
-    ]
+    ]*/
   }
   };
 
