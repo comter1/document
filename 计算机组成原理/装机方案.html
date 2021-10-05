@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>需求分析： | 浪荡人儿</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/document/assets/img/favicon.ico">
+    <link rel="manifest" href="/document/manifest.json">
+    <link rel="apple-touch-icon" href="/document/icons/t1-1.png">
+    <link rel="mask-icon" href="/document/icons/ts1.svg" color="#c">
+    <meta name="description" content="简单笔记">
+    <meta name="theme-color" content="#c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/t1-2.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="author" content="浪荡人儿">
+    <meta name="keywords" content="vuepress介绍，浪荡人儿，pwn记录">
+    
+    <link rel="preload" href="/document/assets/css/0.styles.c7120718.css" as="style"><link rel="preload" href="/document/assets/js/app.727647c9.js" as="script"><link rel="preload" href="/document/assets/js/7.c276544a.js" as="script"><link rel="preload" href="/document/assets/js/2.b25b2163.js" as="script"><link rel="preload" href="/document/assets/js/15.5a4ee0bd.js" as="script"><link rel="preload" href="/document/assets/js/3.31a95120.js" as="script"><link rel="prefetch" href="/document/assets/js/10.ea714737.js"><link rel="prefetch" href="/document/assets/js/11.229f0623.js"><link rel="prefetch" href="/document/assets/js/12.ba875af6.js"><link rel="prefetch" href="/document/assets/js/13.07bd397e.js"><link rel="prefetch" href="/document/assets/js/14.34f779a1.js"><link rel="prefetch" href="/document/assets/js/16.6ac8aaa1.js"><link rel="prefetch" href="/document/assets/js/4.c5f07560.js"><link rel="prefetch" href="/document/assets/js/5.a26d7ad6.js"><link rel="prefetch" href="/document/assets/js/6.93e0032a.js"><link rel="prefetch" href="/document/assets/js/8.0704ca3d.js"><link rel="prefetch" href="/document/assets/js/9.77f622bc.js">
+    <link rel="stylesheet" href="/document/assets/css/0.styles.c7120718.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/document/" class="home-link router-link-active"><img src="/document/assets/img/logo.png" alt="浪荡人儿" class="logo"> <span class="site-name can-hide">浪荡人儿</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学科" class="dropdown-title"><span class="title">学科</span> <span class="arrow down"></span></button> <button type="button" aria-label="学科" class="mobile-dropdown-title"><span class="title">学科</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          计算机组成原理
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/计算机组成原理/装机方案.html" class="nav-link">
+  装机方案
+</a></li></ul></li><li class="dropdown-item"><h4>
+          计算机网络
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  问题思考方法
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/document/About/about.html" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="pwn" class="dropdown-title"><span class="title">pwn</span> <span class="arrow down"></span></button> <button type="button" aria-label="pwn" class="mobile-dropdown-title"><span class="title">pwn</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          虚拟机的搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  安装
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  进行简单配置
+</a></li></ul></li><li class="dropdown-item"><h4>
+          本机软件安装与使用
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  IDA
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  吾爱破解
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="汇编语言" class="dropdown-title"><span class="title">汇编语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="汇编语言" class="mobile-dropdown-title"><span class="title">汇编语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          寄存器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  寄存器简介
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  字的存储
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Group2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  Home
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  Guide
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学科" class="dropdown-title"><span class="title">学科</span> <span class="arrow down"></span></button> <button type="button" aria-label="学科" class="mobile-dropdown-title"><span class="title">学科</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          计算机组成原理
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/计算机组成原理/装机方案.html" class="nav-link">
+  装机方案
+</a></li></ul></li><li class="dropdown-item"><h4>
+          计算机网络
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  问题思考方法
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/document/About/about.html" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="pwn" class="dropdown-title"><span class="title">pwn</span> <span class="arrow down"></span></button> <button type="button" aria-label="pwn" class="mobile-dropdown-title"><span class="title">pwn</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          虚拟机的搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  安装
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  进行简单配置
+</a></li></ul></li><li class="dropdown-item"><h4>
+          本机软件安装与使用
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  IDA
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  吾爱破解
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="汇编语言" class="dropdown-title"><span class="title">汇编语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="汇编语言" class="mobile-dropdown-title"><span class="title">汇编语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          寄存器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  寄存器简介
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  字的存储
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Group2
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  Home
+</a></li><li class="dropdown-subitem"><a href="/document/" class="nav-link">
+  Guide
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>需求分析：</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#需求分析" class="sidebar-link">需求分析：</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#装机配置" class="sidebar-link">装机配置：</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#参数列表" class="sidebar-link">参数列表：</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#cpu配置参数" class="sidebar-link">CPU配置参数</a></li><li class="sidebar-sub-header"><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#主板配置参数" class="sidebar-link">主板配置参数</a></li><li class="sidebar-sub-header"><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#内存配置参数" class="sidebar-link">内存配置参数</a></li><li class="sidebar-sub-header"><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#固态硬盘" class="sidebar-link">固态硬盘</a></li><li class="sidebar-sub-header"><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#硬盘" class="sidebar-link">硬盘</a></li></ul></li><li><a href="/document/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%A3%85%E6%9C%BA%E6%96%B9%E6%A1%88.html#性能描述" class="sidebar-link">性能描述：</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="需求分析"><a href="#需求分析" class="header-anchor">#</a> 需求分析：</h2> <p>用户定位：大学生<br>
+用户需求：想要组装一台在虚拟机、MATLAB同时运行时不卡顿的电脑<br>
+经济能力：1万以内可接受</p> <h2 id="装机配置"><a href="#装机配置" class="header-anchor">#</a> 装机配置：</h2> <table><thead><tr><th style="text-align:center;">硬件</th> <th style="text-align:center;">价格</th> <th style="text-align:center;">所选内容</th></tr></thead> <tbody><tr><td style="text-align:center;">CPU</td> <td style="text-align:center;">2439</td> <td style="text-align:center;">Intel 酷睿i7 8086K（限量版）</td></tr> <tr><td style="text-align:center;">主板</td> <td style="text-align:center;">1299</td> <td style="text-align:center;">华硕TUF Z370-PLUS GAMING</td></tr> <tr><td style="text-align:center;">内存</td> <td style="text-align:center;">1199</td> <td style="text-align:center;">海盗船复仇者RGB Pro 32GB DDR4 3200</td></tr> <tr><td style="text-align:center;">硬盘</td> <td style="text-align:center;">280</td> <td style="text-align:center;">西部数据蓝盘 1TB 7200转 64MB SATA3（WD10）</td></tr> <tr><td style="text-align:center;">固态</td> <td style="text-align:center;">1399</td> <td style="text-align:center;">aigo P7000（1TB）</td></tr> <tr><td style="text-align:center;">显示器</td> <td style="text-align:center;">879</td> <td style="text-align:center;">AOC 27B1H</td></tr> <tr><td style="text-align:center;">机箱</td> <td style="text-align:center;">139</td> <td style="text-align:center;">Tt 启航者 S5</td></tr> <tr><td style="text-align:center;">电源</td> <td style="text-align:center;">259</td> <td style="text-align:center;">长城HOPE-6000DS</td></tr> <tr><td style="text-align:center;">散热器</td> <td style="text-align:center;">219</td> <td style="text-align:center;">九州风神大霜塔</td></tr> <tr><td style="text-align:center;">鼠标</td> <td style="text-align:center;">30</td> <td style="text-align:center;">双飞燕OP-550NU针光鼠标</td></tr> <tr><td style="text-align:center;">键盘</td> <td style="text-align:center;">89</td> <td style="text-align:center;">雷柏V500游戏机械键盘</td></tr> <tr><td style="text-align:center;">光驱</td> <td style="text-align:center;">249</td> <td style="text-align:center;">华硕SDRW-08D2S-U</td></tr> <tr><td style="text-align:center;">总价</td> <td style="text-align:center;">8480</td> <td style="text-align:center;"></td></tr></tbody></table> <h2 id="参数列表"><a href="#参数列表" class="header-anchor">#</a> 参数列表：</h2> <h3 id="cpu配置参数"><a href="#cpu配置参数" class="header-anchor">#</a> CPU配置参数</h3> <table><thead><tr><th style="text-align:center;">配置</th> <th style="text-align:center;">参数</th></tr></thead> <tbody><tr><td style="text-align:center;">主频</td> <td style="text-align:center;">4GHz</td></tr> <tr><td style="text-align:center;">最高睿频</td> <td style="text-align:center;">5GHz</td></tr> <tr><td style="text-align:center;">核心数量</td> <td style="text-align:center;">六核</td></tr> <tr><td style="text-align:center;">线程</td> <td style="text-align:center;">十二线程</td></tr> <tr><td style="text-align:center;">三级缓存</td> <td style="text-align:center;">12MB</td></tr> <tr><td style="text-align:center;">总线规格</td> <td style="text-align:center;">DMI3 8GT/s</td></tr> <tr><td style="text-align:center;">热设计功耗（TDP）</td> <td style="text-align:center;">95W</td></tr> <tr><td style="text-align:center;">支持最大内存</td> <td style="text-align:center;">128GB</td></tr> <tr><td style="text-align:center;">睿频加速技术</td> <td style="text-align:center;">支持</td></tr> <tr><td style="text-align:center;">超线程技术</td> <td style="text-align:center;">支持</td></tr> <tr><td style="text-align:center;">虚拟化技术</td> <td style="text-align:center;">Intel VT-x</td></tr> <tr><td style="text-align:center;">指令集</td> <td style="text-align:center;">SSE4.1/4.2,64bits，AVX2</td></tr> <tr><td style="text-align:center;">64位处理器</td> <td style="text-align:center;">是</td></tr></tbody></table> <h3 id="主板配置参数"><a href="#主板配置参数" class="header-anchor">#</a> 主板配置参数</h3> <table><thead><tr><th style="text-align:center;">配置</th> <th style="text-align:center;">参数</th></tr></thead> <tbody><tr><td style="text-align:center;">集成芯片</td> <td style="text-align:center;">声卡/网卡</td></tr> <tr><td style="text-align:center;">主芯片组</td> <td style="text-align:center;">Intel Z370</td></tr></tbody></table> <p>芯片组描述 	   采用Intel Z370芯片组
+显示芯片 	   CPU内置显示芯片（需要CPU支持）
+音频芯片 	   集成Realtek ALC887 8声道音效芯片
+网卡芯片 	   板载Intel I219V千兆网卡
+CPU类型        第八代Core i7/i5/i3/Pentium/Celeron
+CPU插槽 	      LGA 1151
+内存类型 	    4×DDR4 DIMM
+最大内存容量 	 64GB
+内存描述 	   支持双通道 DDR4 4000(超频)/3866(超频)/3733(超频)/3600(超频)/3466(超频)/3400(超频)/3333(超频)/3300(超频)/3200(超频)/3000(超频)/2800(超频)/2666/2400/2133MHz内存
+存储扩展
+PCI-E标准 	PCI-E 3.0
+PCI-E插槽 	2×PCI-E X16显卡插槽，4×PCI-E X1显卡插槽
+存储接口 	2×M.2接口，6×SATA III接口
+I/O接口
+USB接口 	2×USB3.1 Gen2 Type-A接口，1×USB接口（1内置），6×USB3.1 Gen1 接口（4内置+2背板），6×USB2.0接口（4内置+2背板）
+视频接口 	1×DVI接口，1×HDMI接口
+电源接口 	一个8针，一个24针电源接口
+其它接口 	1×RJ45网络接口，1×光纤接口，3×音频接口，1×RGB灯条接口，2×机箱风扇接口，1×前面板音频接口，1×系统面板接口，1×PS/2键鼠通用接口
+板型
+主板板型 	ATX板型
+外形尺寸 	30.4×24.3cm
+软件管理
+BIOS性能 	128Mb Flash ROM，UEFI AMI BIOS，PnP，DMI3.0，WfM2.0，SM BIOS 3.0，ACPI 6.0，多国语言 BIOS，ASUS EZ Flash 3，CrashFree BIOS 3，F11 EZ Tuning Wizard，F6 Qfan Control，F3 收藏夹，历史记录，F12 截屏，内存SPD信息
+超频功能 	支持
+RAID功能 	支持RAID 0，1，5，10</p> <h3 id="内存配置参数"><a href="#内存配置参数" class="header-anchor">#</a> 内存配置参数</h3> <table><thead><tr><th style="text-align:center;">配置</th> <th style="text-align:center;">参数</th></tr></thead> <tbody><tr><td style="text-align:center;">内存容量</td> <td style="text-align:center;">32GB(2x16GB)</td></tr> <tr><td style="text-align:center;">内存类型</td> <td style="text-align:center;">DDR4</td></tr> <tr><td style="text-align:center;">内存主频</td> <td style="text-align:center;">3200MHz</td></tr> <tr><td style="text-align:center;">传输标准</td> <td style="text-align:center;">PC4-24000</td></tr> <tr><td style="text-align:center;">针脚数</td> <td style="text-align:center;">288pin</td></tr> <tr><td style="text-align:center;">插槽类型</td> <td style="text-align:center;">DIMM</td></tr></tbody></table> <h3 id="固态硬盘"><a href="#固态硬盘" class="header-anchor">#</a> 固态硬盘</h3> <table><thead><tr><th style="text-align:center;">配置</th> <th style="text-align:center;">参数</th></tr></thead> <tbody><tr><td style="text-align:center;">存储容量</td> <td style="text-align:center;">1TB</td></tr> <tr><td style="text-align:center;">接口类型</td> <td style="text-align:center;">M.2 PCle接口</td></tr> <tr><td style="text-align:center;">闪存架构</td> <td style="text-align:center;">TLC三层单元</td></tr> <tr><td style="text-align:center;">缓存</td> <td style="text-align:center;">1GB</td></tr> <tr><td style="text-align:center;">通道</td> <td style="text-align:center;">Gen4 x 4</td></tr> <tr><td style="text-align:center;">存储介质</td> <td style="text-align:center;">3D NAND内存</td></tr> <tr><td style="text-align:center;">读取速度</td> <td style="text-align:center;">7000MB/s</td></tr> <tr><td style="text-align:center;">写入速度</td> <td style="text-align:center;">5500MB/s</td></tr></tbody></table> <h3 id="硬盘"><a href="#硬盘" class="header-anchor">#</a> 硬盘</h3> <div class="language- extra-class"><pre><code>硬盘容量	1000GB
+盘片数量	2片
+单碟容量	1000GB
+缓存	64MB
+转速	7200rpm
+接口类型	SATA3.0
+接口速率	6Gb/s
+功率	读/写：6.8W；闲置：6.1W 
+        备用：1.2W；睡眠：1.2W
+噪音	闲置：29分贝
+        搜寻：30分贝
+
+
+显示器
+产品类型	LED显示器、广视角显示器、护眼模式
+产品类型	LED显示器、广视角显示器、护眼模式
+屏幕尺寸	27英寸
+最佳分辨率	1920 x 1080
+屏幕比例	16:9
+高清标准	1080p(全高清)
+面板类型	IPS
+背光类型	LED背光
+动态对比度	2000万:1
+静态对比度	1000:1
+响应时间	7ms
+点距	0.3114mm
+亮度	250cd/㎡
+可视角度	178/178°
+显示颜色	16.7M
+视频接口	D-Sub（VGA），HDMI
+其他接口	音频输出
+机身颜色	黑色
+外观设计	0.5mm窄边框，13mm薄机身
+节能标准	二级
+HDCP	支持
+
+机箱	 
+机箱样式	亚克力侧透
+机箱结构	ATX
+使用主板	MATX板型，ATX板型，ITX板型
+电源设计	下置电源
+扩展插槽	7个
+面板接口	USB3.0接口 x1；USB2.0接口 x2
+耳机接口 x1；麦克风接口 x1
+散热功能	前置：2×120mm+1×80mm风扇
+           后置：1×120mm风扇
+           顶置：2×120mm风扇
+理线功能	背部理线
+硬盘位	2HDD+2SSD
+外形设计	透明亚克力板，内部装饰一览无余；
+           金属拉丝面板，简约低调细腻优雅；
+           超大背线空间，侧板轻松合实
+机箱材质	钢
+板材厚度	0.5mm
+产品尺寸	458×196×425mm
+
+电源
+电源版本	ATX 12V 2.31
+出线类型	非模组电源
+额定功率	500W
+主板接口	20+4pin
+CPU接口（4+4pin）	1
+显卡接口（6pin）	2
+硬盘接口	5
+供电接口（大4pin）	3
+交流输入	200V（非宽幅），5A，50Hz
+PFC类型	主动式
+转换效率	85%
+
+散热器	 
+智能温控	支持
+电源参数	12V,0.2A
+输入功率	2.4-3W
+轴承类型	液压轴承（Hydraulic Bearing）
+转数描述	900±150至1500±10%RPM
+最大风量	60.29CFM
+噪音	21.4-32.1dB
+热管数量	6个
+热管材质	铜
+
+鼠标
+连接方式	有线
+鼠标接口	USB
+按键数	3个
+滚轮方向	双向滚轮
+最高分辨率	1000dpi
+人体工学	对称设计
+
+
+键盘
+连接方式	有线
+键盘接口	USB
+按键数	92键
+键盘布局	笔记本式
+按键技术	机械轴（雷柏黑轴，雷柏青轴，雷柏茶轴，雷柏黄轴）
+按键行程	中
+按键寿命	6000万次
+多媒体快捷键	支持
+</code></pre></div><h2 id="性能描述"><a href="#性能描述" class="header-anchor">#</a> 性能描述：</h2> <p>cpu主要有两大厂商，Intel以及AMD，我个人比较偏向喜欢Intel。</p> <p>首先，相比较intel和amd，Intel对于一些计算机专业的学生来说会更加友好，对于一些软件来说，在程序开发时就把英特尔的新产品指令、SDK等内容提前集成到处理器里，使得产品出厂时其原生生态就更优秀。体现在最终的处理器运行能力上，使得搭载英特尔处理器的电脑在各个场景下能够运行表现良好、具有更好的兼容性稳定性。不管是品牌机游戏本、高校实验室等等，都仍是Intel使用更普遍。老师在教学过程中，更多的也是以Intel为例进行演示。</p> <p>其次，Intel比amd的发热量要少一点，发热量越多，其主板温度就越高，其使用时间就越短。其实这个算是萝卜白菜各有所爱，有人喜欢Intel稳重的大叔类型，有人喜欢amd这种有激情的少年。想要Intel，同等价位下可能他的超频不如amd，而amd的散热不如Intel。</p> <p>再次，相比较而言，Intel处理器的稳定性要比amd的好。</p> <p>接下来是针对这款计算机本身来说，这款计算机的用户想要在平时运行虚拟机以及Matlab等，其cpu的主频以及内存就非常重要，尤其是内存。
+因为Intel在科学计算的积淀很深，MATLAB使用的Intel MKL(Math Kernel Library)数学核心计算库，而MKL从来没有真正在AMD CPU上测试过，并且计算速度会显著降低。所以，此款计算机使用的是Intel的酷睿i7 8086K（限量版）。而对于虚拟机来说，此款cpu支持虚拟化，这种硬件技术是用来辅助VM之类的软件进行多系统虚拟的，能够有效提高软件虚拟的效率，让服务器同时运行多种客户操作系统，其性能比软件模拟要好很多。此外，这款cpu的主频与睿频也是比较高的。cpu主频是指电脑在普通引用的时候所有核心都能达到的频率，而睿频是指在核心数量不满载的情况下，关闭或者降低部分核心的频率而升高另外正在使用的核心的频率。这样可以提高效率而不增加功耗。想要运行虚拟机就要cpu的主频而不玩游戏的话，对于显卡就没有什么太大要求了，因此这个是用的是CPU自带的集成显卡。</p> <p>再来说说内存，不管是虚拟机还是matlab，都是很费内存的，就笔记本来说，只运行一个虚拟机内存动不动就到了近70%，可见其占用之大，因此选了32G的。目前来说，主流的cpu都支持双通道，因此2条16G的要比单条32G的性能要高。预算足够的话其实是可以再增大一些的，不过这个暂时看来还是足够的，如果以后真的想要进行深度学习什么的，可以再换，现在使用一般是足够的。而且海盗船这个品牌的内存也是一直以来比较受人信赖的。</p> <p>之后就是硬盘了，硬盘选择的是HDD+SSD，机械硬盘用来存数据，固态是可以加速开机的，对于运行也会提速。</p> <p>对于屏幕来说，选择的是27英寸的液晶屏，对于分析代码会方便很多，在一些复现或者逆向等操作中，能够更加迅速的找到溢出位置。而即便是对于单纯看剧看新闻来说，也更加方便，又不用像笔记本电脑一样四处带着走。</p> <p>鼠标使用的是茶轴，茶轴号称万用轴，作为cherry轴体的一员，茶轴在制造参数上比较中庸，能够兼具实际应用和理论性能。在轴体理论性能上，两个重要的参数一个是轴体的压力克数，另一个便是触发键程。压力克数，通过简单的字眼可以理解，压力克数指的是单位面积下，将轴体按压到底部所需要的最低压力值，同样的触发键程指的是轴体从正常的垂直水平状态到按压到底部的最长距离。正是在这两个值的共同作用下，不同轴体不同数值会产生明显的不同手感和体验。同时鉴于这两个数值的客观稳定性，一般用来理论评估不同轴体带来的手感异同。再先来看轴体的压力克数，根据官方提供的几个常规轴体的数值，红轴和银轴的压力克数相同，均为45cN左右；茶轴则为55cN，至于青轴为60cN，更为夸张的黑轴高达80cN。再来看触发键程，青轴的触发键程最高约为2.2mm，红轴和茶轴处于中间水准约为2mm，至于黑轴则为1.5mm，而银轴则更为吓人的1.2mm。通过简单的数值比较，可以看到无论是压力克数还是触发键程，茶轴几乎都是处于cherry常见的多种轴体中的中间水准，换句话说中庸的参数设计使得茶轴在出厂之初就被设定成了“万用轴”。</p> <p>集成芯片 	   声卡/网卡
+主芯片组 	   Intel Z370
+显示芯片 	   CPU内置显示芯片
+音频芯片 	   集成Realtek ALC887 8声道音效芯片
+网卡芯片 	   板载Intel I219V千兆网卡
+CPU类型        第八代Core i7/i5/i3/Pentium/Celeron
+CPU插槽 	      LGA 1151
+内存类型 	    4×DDR4 DIMM
+最大内存容量 	 64GB
+PCI-E标准 	   PCI-E 3.0
+PCI-E插槽 	   2×PCI-E X16显卡插槽，4×PCI-E X1显卡插槽
+存储接口 	   2×M.2接口，6×SATA III接口
+USB接口     	2×USB3.1 Gen2 Type-A接口，1×USB接口（1内置），
+6×USB3.1 Gen1 接口（4内置+2背板），6×USB2.0接口（4内置+2背板）
+视频接口 	   1×DVI接口，1×HDMI接口
+电源接口 	   一个8针，一个24针电源接口
+其它接口 	   1×RJ45网络接口，1×光纤接口，3×音频接口，1×RGB灯条接口，2×机箱风扇接口
+1×前面板音频接口，1×系统面板接口，1×PS/2键鼠通用接口
+主板板型 	   ATX板型
+超频功能 	   支持
+RAID功能 	   支持RAID 0，1，5，10</p> <p>内存描述 	   支持双通道 DDR4 4000(超频)/3866(超频)/3733(超频)/3600(超频)/3466(超频)/3400(超频)/3333(超频)/3300(超频)/3200(超频)/3000(超频)/2800(超频)/2666/2400/2133MHz内存
+BIOS性能 	128Mb Flash ROM，UEFI AMI BIOS，PnP，DMI3.0，WfM2.0，SM BIOS 3.0，ACPI 6.0，多国语言 BIOS，ASUS EZ Flash 3，CrashFree BIOS 3，F11 EZ Tuning Wizard，F6 Qfan Control，F3 收藏夹，历史记录，F12 截屏，内存SPD信息</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2021年10月4日星期一中午11点58分</span></div></footer> <!---->  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/document/assets/js/app.727647c9.js" defer></script><script src="/document/assets/js/7.c276544a.js" defer></script><script src="/document/assets/js/2.b25b2163.js" defer></script><script src="/document/assets/js/15.5a4ee0bd.js" defer></script><script src="/document/assets/js/3.31a95120.js" defer></script>
+  </body>
+</html>
